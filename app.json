@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "StudyFocusApp",
+    "slug": "StudyFocusApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.saya.focusapp"  
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.saya.focusapp"           
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "47253f09-befa-4598-9ddc-82067a30ac7b"
+      }
+    },
+    "owner": "s_8",
+    "updates": {
+      "url": "https://u.expo.dev/47253f09-befa-4598-9ddc-82067a30ac7b"
+    }
+  }
+}

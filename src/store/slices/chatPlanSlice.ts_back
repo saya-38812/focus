@@ -1,0 +1,31 @@
+// src/store/chatPlanSlice.ts - 新規作成
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { ExtractedPlan } from '../utils/planExtractor';
+
+interface ChatPlanState {
+  pendingPlan: ExtractedPlan | null;
+  fromChat: boolean;
+}
+
+const initialState: ChatPlanState = {
+  pendingPlan: null,
+  fromChat: false,
+};
+
+const chatPlanSlice = createSlice({
+  name: 'chatPlan',
+  initialState,
+  reducers: {
+    setPendingPlan: (state, action: PayloadAction<ExtractedPlan>) => {
+      state.pendingPlan = action.payload;
+      state.fromChat = true;
+    },
+    clearPendingPlan: (state) => {
+      state.pendingPlan = null;
+      state.fromChat = false;
+    },
+  },
+});
+
+export const { setPendingPlan, clearPendingPlan } = chatPlanSlice.actions;
+export default chatPlanSlice.reducer;
